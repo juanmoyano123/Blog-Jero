@@ -1,0 +1,7 @@
+.meta {
+    @apply flex p-2 justify-between
+}
+
+.icono {
+    @apply nm-inset-gray-100 rounded-full h-10 w-10 flex items-center justify-center text-xl
+}
