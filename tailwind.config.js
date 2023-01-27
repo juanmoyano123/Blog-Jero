@@ -12,7 +12,6 @@ module.exports = {
         xl: "48px",
         principal: "64px",
       },
-    
     },
   },
   plugins: [],
