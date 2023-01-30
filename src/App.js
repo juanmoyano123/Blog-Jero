@@ -1,21 +1,17 @@
-import './App.css';
-import Encabezamiento from './componentes/compartidos/Encabezamiento';
-import Principal from './componentes/compartidos/Principal';
-import Pie from "./componentes/compartidos/Pie"
-/* import Lista from './componentes/lista/Lista';
- */
-import Detalles from './componentes/nueva/Detalles.jsx';
+import { Route, Routes } from "react-router";
+import "./App.css";
+import Layout from "./componentes/compartidos/Layout";
+import Lista from "./componentes/lista/Lista.jsx";
+import Detalles from "./componentes/nueva/Detalles.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <Encabezamiento></Encabezamiento>
-      <Principal>
-        <Detalles></Detalles>
-        {/* <Lista></Lista> */}
-      </Principal>
-      <Pie></Pie>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/lista" element={<Lista />} />
+        <Route path="/nueva" element={<Detalles />} />
+      </Route>
+    </Routes>
   );
 }
 
