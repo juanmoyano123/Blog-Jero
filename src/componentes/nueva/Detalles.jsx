@@ -1,10 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Contexto } from "../../servicios/Memoria";
+import { useNavigate } from "react-router";
 
 function Detalles() {
   let frecuencia = ["dia", "semana", "mes", "año"];
   const iconos = ["💻", "🏃‍♂️", "📚", "✈️", "💵"];
-
+const navegar = useNavigate()
   const [form, setForm] = useState({
     detalles: "",
     eventos: 1,
@@ -14,6 +16,13 @@ function Detalles() {
     plazo: "2030/02/02",
   });
   const { detalles, eventos, periodo, icono, meta, plazo, completado } = form;
+
+  const [estado,enviar ] = useContext(Contexto);
+
+  const crear = async ()=>{
+    enviar({tipo:"crear",meta:form})
+    navegar("/lista")
+  }
 
   const onChange = (event, prop) => {
     setForm((estado) => ({ ...estado, [prop]: event.target.value }));
@@ -100,7 +109,7 @@ function Detalles() {
       </form>
 
       <div className="flex justify-around pb-5">
-        <button className="boton boton--negro">Crear</button>
+        <button onClick={crear} className="boton boton--negro">Crear</button>
         <button className="boton boton--gris">Cancelar</button>
       </div>
     </div>

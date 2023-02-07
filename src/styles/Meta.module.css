@@ -1,5 +1,5 @@
 .meta {
-    @apply flex p-2 justify-between
+    @apply flex p-2 justify-between min-w-max gap-5
 }
 
 .icono {
@@ -8,7 +8,7 @@
 
 
 .barra1 {
-  @apply nm-convex-gray-100 h-1 w-28 rounded bg-blue-200
+  @apply nm-convex-gray-100 h-1 w-24 rounded bg-blue-200
 }
 
 .barra2 {
