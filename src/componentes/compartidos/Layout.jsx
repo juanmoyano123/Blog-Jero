@@ -6,15 +6,15 @@ import { Outlet } from "react-router";
 /* import Lista from "../lista/Lista";
 import Detalles from "../nueva/Detalles"; */
 
-const Layout = () => {
+const Layout = ({props}) => {
   return (
     <>
       <Encabezamiento></Encabezamiento>
       <Principal>
-        <Outlet></Outlet>
-        {/*     <Detalles></Detalles>
-        <Lista></Lista> */}
-      </Principal>
+       
+       <Outlet></Outlet>
+
+       </Principal>
       <Pie></Pie>
     </>
   );
