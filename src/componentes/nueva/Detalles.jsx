@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import { Contexto } from "../../servicios/Memoria";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 function Detalles() {
   let frecuencia = ["dia", "semana", "mes", "año"];
@@ -29,6 +29,8 @@ const navegar = useNavigate()
     console.log(form);
   };
 
+  const {id}= useParams()
+console.log(id);
   return (
     <div className="tarjeta">
       <form className="p-4" action="">

@@ -1,10 +1,16 @@
 import React from 'react'
 import { useParams } from 'react-router'
+import Detalles from '../nueva/Detalles'
 
 function Modal() {
-  const {id}= useParams()
+
   return (
-    <div>{id}</div>
+    <div className='flex items-center fixed '>
+      {/* {JSON.stringify(estado.objetos[id])} */}
+      <div className='mx-auto'>
+    <Detalles></Detalles>
+    </div>
+    </div>
   )
 }
 
