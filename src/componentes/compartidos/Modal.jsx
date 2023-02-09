@@ -2,13 +2,13 @@ import React from 'react'
 import { useParams } from 'react-router'
 import Detalles from '../nueva/Detalles'
 
-function Modal() {
+function Modal({children}) {
 
   return (
-    <div className='flex items-center fixed '>
+    <div className='flex items-center fixed  inset-0 bg-gray-500 bg-opacity-75'>
       {/* {JSON.stringify(estado.objetos[id])} */}
       <div className='mx-auto'>
-    <Detalles></Detalles>
+    {children}
     </div>
     </div>
   )
