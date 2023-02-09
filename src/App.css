@@ -11,7 +11,11 @@
 }
 
 .boton--negro {
-  @apply text-white nm-flat-gray-700 hover:bg-gray-800;
+  @apply text-white nm-flat-gray-700 hover:bg-green-800;
+}
+
+.boton--rojo {
+  @apply text-white nm-flat-gray-700 hover:bg-red-800;
 }
 
 .label {
